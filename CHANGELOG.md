@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [Master](https://github.com/fulldecent/FDTextFieldTableViewCell/compare/1.0.0...master)
+## [Master](https://github.com/fulldecent/FDTextFieldTableViewCell/compare/1.0.1...master)
+
+---
+
+## [1.0.1](https://github.com/fulldecent/FDTextFieldTableViewCell/releases/1.0.1)
+Released on 2016-06-27.
 
 #### Updated
 - Add contributing guidelines and document release process
