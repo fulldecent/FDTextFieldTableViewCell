@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 ## [Master](https://github.com/fulldecent/FDTextFieldTableViewCell/compare/1.0.0...master)
 
 #### Updated
+- Add contributing guidelines and document release process
+  - Added by [William Entriken](https://github.com/fulldecent)
 - Fully document API
   - Added by [William Entriken](https://github.com/fulldecent)
 - Travis CI testing
