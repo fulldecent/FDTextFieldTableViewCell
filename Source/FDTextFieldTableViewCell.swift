@@ -9,25 +9,30 @@
 import UIKit
 
 //@IBDesignable
+/// A UITableViewCell with a UITextField inside
 public class FDTextFieldTableViewCell: UITableViewCell {
+    /// A UITextField
     public var textField = UITextField()
-    
+
+    /// UIView initializer
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .Default, reuseIdentifier: reuseIdentifier)
         self.setup()
     }
-    
+
+    /// UIView initializer
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setup()
     }
-    
+
+    /// UIView initializer
     override public func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
     }
-    
-    func setup() {
+
+    private func setup() {
         self.detailTextLabel!.hidden = true
         self.contentView.viewWithTag(3)?.removeFromSuperview()
         self.textField.tag = 3
@@ -39,7 +44,8 @@ public class FDTextFieldTableViewCell: UITableViewCell {
         self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .Trailing, relatedBy: .Equal, toItem: self.contentView, attribute: .Trailing, multiplier: 1, constant: -16))
         self.textField.textAlignment = .Right
     }
-    
+
+    /// UIView internal handler
     override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.textField.becomeFirstResponder()
     }
