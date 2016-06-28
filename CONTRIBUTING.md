@@ -16,5 +16,5 @@ All contributors are welcome. Please use issues and pull requests to contribute 
    1. `pod trunk push`
 4. Create Carthage binaries
    1. `carthage build --no-skip-current`
-   2. `carthage archive FDBarGuage`
+   2. `carthage archive FDTextFieldTableViewCell`
    3. Add to the GitHub release
