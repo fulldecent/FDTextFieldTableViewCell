@@ -26,7 +26,7 @@
 		D94BE1CE1CCEBFD80042282A /* FDTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		D9FEF4B41CCEBC0D0013FBDD /* FDTextFieldTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDTextFieldTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FEF4B91CCEBC0D0013FBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9FEF4BE1CCEBC0F0013FBDD /* FDTextFieldTableViewCell.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDTextFieldTableViewCell.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9FEF4BE1CCEBC0F0013FBDD /* FDTextFieldTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDTextFieldTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FEF4C31CCEBC100013FBDD /* FDTextFieldTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextFieldTableViewCellTests.swift; sourceTree = "<group>"; };
 		D9FEF4C51CCEBC100013FBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FEF4B41CCEBC0D0013FBDD /* FDTextFieldTableViewCell.framework */,
-				D9FEF4BE1CCEBC0F0013FBDD /* FDTextFieldTableViewCell.xctest */,
+				D9FEF4BE1CCEBC0F0013FBDD /* FDTextFieldTableViewCellTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			);
 			name = FDTextFieldTableViewCellTests;
 			productName = FDTextFieldTableViewCellTests;
-			productReference = D9FEF4BE1CCEBC0F0013FBDD /* FDTextFieldTableViewCell.xctest */;
+			productReference = D9FEF4BE1CCEBC0F0013FBDD /* FDTextFieldTableViewCellTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -349,7 +349,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phor.FDTextFieldTableViewCell.FDTextFieldTableViewCellTests;
-				PRODUCT_NAME = FDTextFieldTableViewCell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -360,7 +360,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phor.FDTextFieldTableViewCell.FDTextFieldTableViewCellTests;
-				PRODUCT_NAME = FDTextFieldTableViewCell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
