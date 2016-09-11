@@ -33,7 +33,6 @@ public class FDTextFieldTableViewCell: UITableViewCell {
     }
 
     private func setup() {
-        self.detailTextLabel!.hidden = true
         self.contentView.viewWithTag(3)?.removeFromSuperview()
         self.textField.tag = 3
         self.textField.translatesAutoresizingMaskIntoConstraints = false
