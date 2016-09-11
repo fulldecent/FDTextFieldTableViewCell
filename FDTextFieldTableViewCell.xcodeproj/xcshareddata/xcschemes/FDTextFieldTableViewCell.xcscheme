@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D9FEF4BD1CCEBC0F0013FBDD"
-               BuildableName = "FDTextFieldTableViewCell.xctest"
+               BuildableName = "FDTextFieldTableViewCellTests.xctest"
                BlueprintName = "FDTextFieldTableViewCellTests"
                ReferencedContainer = "container:FDTextFieldTableViewCell.xcodeproj">
             </BuildableReference>
