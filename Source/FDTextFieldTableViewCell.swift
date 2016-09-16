@@ -10,13 +10,13 @@ import UIKit
 
 //@IBDesignable
 /// A UITableViewCell with a UITextField inside
-public class FDTextFieldTableViewCell: UITableViewCell {
+open class FDTextFieldTableViewCell: UITableViewCell {
     /// A UITextField
-    public var textField = UITextField()
+    open var textField = UITextField()
 
     /// UIView initializer
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .Default, reuseIdentifier: reuseIdentifier)
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.setup()
     }
 
@@ -27,26 +27,26 @@ public class FDTextFieldTableViewCell: UITableViewCell {
     }
 
     /// UIView initializer
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         self.setup()
     }
 
-    private func setup() {
-        self.detailTextLabel!.hidden = true
+    fileprivate func setup() {
+        self.detailTextLabel!.isHidden = true
         self.contentView.viewWithTag(3)?.removeFromSuperview()
         self.textField.tag = 3
         self.textField.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.textField)
-        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .Leading, relatedBy: .Equal, toItem: self.contentView, attribute: .Leading, multiplier: 1, constant: 50))
-        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .Top, relatedBy: .Equal, toItem: self.contentView, attribute: .Top, multiplier: 1, constant: 8))
-        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .Bottom, relatedBy: .Equal, toItem: self.contentView, attribute: .Bottom, multiplier: 1, constant: -8))
-        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .Trailing, relatedBy: .Equal, toItem: self.contentView, attribute: .Trailing, multiplier: 1, constant: -16))
-        self.textField.textAlignment = .Right
+        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .leading, relatedBy: .equal, toItem: self.contentView, attribute: .leading, multiplier: 1, constant: 50))
+        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant: 8))
+        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .bottom, relatedBy: .equal, toItem: self.contentView, attribute: .bottom, multiplier: 1, constant: -8))
+        self.addConstraint(NSLayoutConstraint(item: self.textField, attribute: .trailing, relatedBy: .equal, toItem: self.contentView, attribute: .trailing, multiplier: 1, constant: -16))
+        self.textField.textAlignment = .right
     }
 
     /// UIView internal handler
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.textField.becomeFirstResponder()
     }
 }
