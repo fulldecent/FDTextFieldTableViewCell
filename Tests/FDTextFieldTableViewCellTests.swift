@@ -14,7 +14,7 @@ class FDTextFieldTableViewCellTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        cell = FDTextFieldTableViewCell()
+        cell = FDTextFieldTableViewCell(style:.default, reuseIdentifier: "bob")
     }
     
     override func tearDown() {
