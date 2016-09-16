@@ -10,7 +10,7 @@ import XCTest
 @testable import FDTextFieldTableViewCell
 
 class FDTextFieldTableViewCellTests: XCTestCase {
-    var cell: FDTextFieldTableViewCell? = nil
+    var cell: FDTextFieldTableViewCell!
     
     override func setUp() {
         super.setUp()
@@ -26,5 +26,16 @@ class FDTextFieldTableViewCellTests: XCTestCase {
         XCTAssert(true)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testCanSubclass() {
+        class Bob: FDTextFieldTableViewCell {
+        }
+        XCTAssert(true)
+    }
+    
+    func testHasTextField() {
+        let _ = cell.textField
+        XCTAssert(true)
     }
 }
