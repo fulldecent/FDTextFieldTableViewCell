@@ -10,35 +10,35 @@ import UIKit
 import FDTextFieldTableViewCell
 
 class ViewController: UITableViewController {
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch indexPath.section {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch (indexPath as NSIndexPath).section {
         case 0:
-            let cell = self.tableView.dequeueReusableCellWithIdentifier("textField") as! FDTextFieldTableViewCell
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "textField") as! FDTextFieldTableViewCell
             cell.textLabel!.text = "hi"
             cell.textField.text = "editMe"
             return cell
         default:
-            let cell = self.tableView.dequeueReusableCellWithIdentifier("basic")!
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "basic")!
             cell.textLabel!.text = "hi"
             return cell
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.view!.endEditing(true)
     }
 }
 
 extension ViewController /*: UIScrollViewDelegate*/ {
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.view!.endEditing(true)
     }
 }

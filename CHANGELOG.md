@@ -4,8 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [Master](https://github.com/fulldecent/FDTextFieldTableViewCell/compare/1.0.1...master)
+## [Master](https://github.com/fulldecent/FDTextFieldTableViewCell/compare/2.0.0...master)
 
+### Updated
+- Support Swift 4
+
+---
+
+## [2.0.0](https://github.com/fulldecent/FDTextFieldTableViewCell/releases/2.0.0)
+Released on 2016-09-16.
+
+#### Updated
+- Support Swift 3
+  - Added by [William Entriken](https://github.com/fulldecent)
 ---
 
 ## [1.0.1](https://github.com/fulldecent/FDTextFieldTableViewCell/releases/1.0.1)
