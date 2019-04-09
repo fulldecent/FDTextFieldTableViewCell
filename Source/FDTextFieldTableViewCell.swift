@@ -15,7 +15,7 @@ open class FDTextFieldTableViewCell: UITableViewCell {
     open var textField = UITextField()
 
     /// UIView initializer
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.setup()
     }
