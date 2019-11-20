@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/fulldecent/FDTextFieldTableViewCell.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
   s.swift_version = '5.0'
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Sources/FDTextFieldTableViewCell/*.swift'
 end

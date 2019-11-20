@@ -17,17 +17,6 @@ class FDTextFieldTableViewCellTests: XCTestCase {
         cell = FDTextFieldTableViewCell(style:.default, reuseIdentifier: "bob")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        XCTAssert(true)
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
     func testCanSubclass() {
         class Bob: FDTextFieldTableViewCell {
         }
@@ -38,4 +27,11 @@ class FDTextFieldTableViewCellTests: XCTestCase {
         let _ = cell.textField
         XCTAssert(true)
     }
+}
+
+extension FDTextFieldTableViewCellTests {
+    static var allTests = [
+        ("testCanSubclass", testCanSubclass),
+        ("testHasTextField", testHasTextField)
+    ]
 }
