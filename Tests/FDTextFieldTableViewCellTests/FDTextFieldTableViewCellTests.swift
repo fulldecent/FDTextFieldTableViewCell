@@ -11,10 +11,19 @@ import XCTest
 
 class FDTextFieldTableViewCellTests: XCTestCase {
     var cell: FDTextFieldTableViewCell!
+    var textFieldSpy: UITextFieldSpy!
     
     override func setUp() {
         super.setUp()
-        cell = FDTextFieldTableViewCell(style:.default, reuseIdentifier: "bob")
+        
+        continueAfterFailure = false
+        
+        cell = FDTextFieldTableViewCell(
+            style:.default,
+            reuseIdentifier: "bob"
+        )
+        textFieldSpy = UITextFieldSpy()
+        cell.textField  = textFieldSpy
     }
     
     func testCanSubclass() {
@@ -27,11 +36,40 @@ class FDTextFieldTableViewCellTests: XCTestCase {
         let _ = cell.textField
         XCTAssert(true)
     }
+    
+    func testCanBeDecoded() {
+        let coder = NSKeyedUnarchiver(forReadingWith: encodeView(cell))
+        let decodedCell = FDTextFieldTableViewCell(coder: coder)
+        
+        XCTAssertNotNil(decodedCell)
+    }
+    
+    func testAwakeFromNib() {
+        cell.awakeFromNib()
+        
+        XCTAssertNotNil(cell)
+    }
+    
+    func testTextFieldShouldBecomeFirstReponderOnTouch() {
+        cell.touchesBegan([], with: nil)
+        
+        XCTAssertEqual(textFieldSpy.numberOfBecomeFirstResponderCalls, 1)
+    }
+    
+    private func encodeView(_ cell: UIView) -> Data {
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWith: data)
+        archiver.encodeRootObject(cell)
+        return data as Data
+    }
 }
 
 extension FDTextFieldTableViewCellTests {
     static var allTests = [
         ("testCanSubclass", testCanSubclass),
-        ("testHasTextField", testHasTextField)
+        ("testHasTextField", testHasTextField),
+        ("testCanBeDecoded", testCanBeDecoded),
+        ("testAwakeFromNib", testAwakeFromNib),
+        ("testTextFieldShouldBecomeFirstReponderOnTouch", testTextFieldShouldBecomeFirstReponderOnTouch)
     ]
 }
