@@ -54,3 +54,15 @@ github "fulldecent/FDTextFieldTableViewCell"
 ```
 
 Then run `carthage update` to build the framework and drag the built `FDTextFieldTableViewCell`.framework into your Xcode project.
+
+## Releases
+
+Use `fix:`, `feat:`, or `BREAKING CHANGE:` prefixes in commit messages. [Release Please](https://github.com/googleapis/release-please) opens a release pull request from those commits. Merging that pull request publishes a tag and a GitHub Release. The git tag is what Swift Package Manager installs.
+
+GitHub Actions needs permission to open pull requests.
+
+If you are adopting this from an existing project and the first Release Please pull request gets the version wrong, check the Release Please documentation. You may need a configuration option when tags have no v prefix, and for other situations.
+
+## References
+
+This repository is built on [swift-module-template](https://github.com/fulldecent/swift-module-template) v16.6.0 and [project-template](https://github.com/fulldecent/project-template) v1.4.1. The published build is an Apple-platform library, not the template's Linux static library.
