@@ -9,13 +9,11 @@ FDTextFieldTableViewCell
 
 <a href="http://i.imgur.com/oXMLOrk.png"><img src="http://i.imgur.com/oXMLOrk.png" title="Hosted by imgur.com" /></a>
 
-
 Features
 ========
 
- * Fully featured like the Right Detail style
- * Adds a UITextField to the cell and places it correctly
-
+* Fully featured like the Right Detail style
+* Adds a UITextField to the cell and places it correctly
 
 Usage
 =====
@@ -32,7 +30,6 @@ In your `UITableViewController` subclass, do something like:
         cell.textField.text = "editMe"
         return cell
     }
-
 
 Installation
 ============
